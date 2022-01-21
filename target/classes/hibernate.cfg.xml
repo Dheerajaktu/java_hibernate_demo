@@ -15,6 +15,12 @@
 
 		<mapping class="com.mapping.oneToOne.Question" />
 		<mapping class="com.mapping.oneToOne.Answer" />
+
+		<mapping class="com.mapping.manyToOne.QuestionDemo" />
+		<mapping class="com.mapping.manyToOne.AnswerDemo" />
+
+		<mapping class="com.mapping.manyToMany.Emp" />
+		<mapping class="com.mapping.manyToMany.Project" />
 	</session-factory>
 
 </hibernate-configuration>
