@@ -1,0 +1,20 @@
+# Hibernate Object life cycle(HOLC)
+>> there are total 4 states in HOLC 
+1 - Transient State
+2 - Persistant State
+3 - Detached State
+4 - Remove State
+
+1 - Transient States(TS) -
+    --> whenever we set new properties to an object then it goes in Transient State. 
+        so in TS object is not associated with DB and Session.
+2&3 - Persistent State and Detached State
+   ---> When we use save()/persist()/saveUpdate() then our object gets into Session and as well as it also change into DB
+        means in this state both(Session and DB) has data 
+        so we when we're in persistent state then we have two option --
+        
+        A): We can clear/close session then it will go in Detached state that means we remove object from Session but not from DB.
+        B): In the PS we can delete object from DB also but data would remain in session so we can fetch also from Session as per need.
+         
+4 -  If we are in PS and then if we delete object from DB but object remains in Session so that means we are in Remove State.         
+         
